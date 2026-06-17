@@ -100,15 +100,21 @@ button {
 
 /* ============================================================
    FADE-IN ANIMATION (Intersection Observer)
+   JS adds .fade-in--ready only to off-screen elements after hydration,
+   so SSR content is always visible and never causes blank pages.
    ============================================================ */
 
 .fade-in {
+  /* visible by default — JS progressively enhances */
+}
+
+.fade-in--ready {
   opacity: 0;
   transform: translateY(24px);
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-.fade-in.visible {
+.fade-in--ready.visible {
   opacity: 1;
   transform: translateY(0);
 }
