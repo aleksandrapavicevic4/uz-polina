@@ -1,39 +1,26 @@
-// [PLACEHOLDER] — all answers are placeholders
-
 export const faqs = [
   {
     question: "Kako se dete priprema za ultrazvuk abdomena?",
     answer:
-      "Dete treba biti natašte minimum 4–6 sati pre pregleda (za odojčad je dovoljno 3 sata). Ukoliko imate pitanja o pripremi za konkretan uzrast, slobodno nas pozovite.", // [PLACEHOLDER]
-  },
-  {
-    question: "Da li roditelji mogu biti prisutni tokom pregleda?",
-    answer:
-      "Da, roditelji su uvek dobrodošli i mogu biti prisutni tokom celog pregleda. Smatramo da je prisustvo roditelja važno za smirenost deteta i za vaše razumevanje nalaza.", // [PLACEHOLDER]
+      "Tri dana pre pregleda detetu dajte laganu hranu, bez hrane koja nadima, mlečnih proizvoda i slatkiša. Na dan pregleda dete ne jede najmanje 4 sata pre pregleda. Oko 1,5 sat pre pregleda dete treba da popije 1–3 čaše vode i da ne mokri do pregleda. Uputstva za ostale preglede navedena su na stranici Usluge.",
   },
   {
     question: "Koliko traje pregled?",
     answer:
-      "Trajanje pregleda zavisi od vrste, ali prosečan pregled traje između 15 i 30 minuta. Za složenije pretrage ili manju decu može biti potrebno nešto više vremena.", // [PLACEHOLDER]
+      "Ultrazvuk abdomena traje oko 30 minuta. Kontrastna mikciona urografija traje najviše 30 minuta, a kod manje dece obično kraće.",
   },
   {
     question: "Da li je ultrazvuk bezbedan za decu?",
     answer:
-      "Da, ultrazvučni pregled je potpuno bezbedan. Ne koristi jonizujuće zračenje, a intenzitet zvučnih talasa koji se koriste u dijagnostici nema štetnih efekata na organizam deteta.", // [PLACEHOLDER]
+      "Da. Ultrazvuk je neinvazivan i bezbolan pregled bez zračenja, bez poznatih neželjenih efekata. Nije potreban period oporavka, pa dete odmah posle pregleda nastavlja uobičajene aktivnosti.",
   },
   {
     question: "Kako mogu da zakažem pregled?",
     answer:
-      "Pregled možete zakazati telefonskim putem tokom radnog vremena ordinacije, ili nam pošaljite poruku putem kontakt forme na sajtu. Trudimo se da odgovorimo u roku od 24 sata.", // [PLACEHOLDER]
+      "Pregled možete zakazati telefonom, radnim danima od 10 do 18 časova, ili putem kontakt forme na sajtu.",
   },
   {
     question: "Kada dobijamo nalaz?",
-    answer:
-      "Pisani nalaz sa opisom i zaključkom dobijate istog dana, odmah po završetku pregleda. Doktor će vam detaljno objasniti nalaz i odgovoriti na sva vaša pitanja.", // [PLACEHOLDER]
-  },
-  {
-    question: "Da li je potrebna uputnica?",
-    answer:
-      "Uputnica nije obavezna za dolazak u privatnu ordinaciju. Pregled možete zakazati direktno, bez upućivanja od strane lekara. Ipak, ukoliko imate uputnicu, slobodno je donesite.", // [PLACEHOLDER]
+    answer: "Nalaz dobijate odmah po završetku pregleda.",
   },
 ];

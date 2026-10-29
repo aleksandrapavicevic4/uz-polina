@@ -12,8 +12,6 @@ export const practice = {
     saturday: "Zatvoreno",
     sunday: "Zatvoreno",
   },
-  instagram: "@ultrazvuk_ordinacija", // [PLACEHOLDER]
-  instagramHref: "https://instagram.com/ultrazvuk_ordinacija", // [PLACEHOLDER]
   mapEmbedUrl:
     "https://www.google.com/maps?q=Smiljani%C4%87eva+7%2C+11000+Beograd&output=embed",
   formspreeEndpoint: "https://formspree.io/f/PLACEHOLDER", // [PLACEHOLDER]

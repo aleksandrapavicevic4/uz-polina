@@ -10,7 +10,7 @@ import ContactCTABanner from "@/components/ui/ContactCTABanner";
 export const metadata: Metadata = {
   title: "Početna",
   description:
-    "Pedijatrska ultrazvučna dijagnostika sa više od 30 godina iskustva. Zakažite pregled danas.",
+    "Ultrazvučna dijagnostika za decu od rođenja do adolescencije i ultrazvuk dojke. Više od 30 godina iskustva u pedijatrskoj radiologiji.",
 };
 
 // FUTURE: /roditelji — articles and guides for parents (needs CMS)

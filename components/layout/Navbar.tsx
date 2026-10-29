@@ -2,37 +2,48 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Heart, Phone } from "lucide-react";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
+import { Phone } from "lucide-react";
 import { practice } from "@/data/practice";
+
+const links = [
+  { href: "/", label: "Početna" },
+  { href: "/o-nama", label: "O nama" },
+  { href: "/usluge", label: "Usluge" },
+  { href: "/kontakt", label: "Kontakt" },
+];
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   return (
     <header className="navbar">
       <div className="container">
         <nav className="navbar__inner">
-          <Link href="/" className="navbar__logo">
-            <Heart size={22} className="navbar__logo-icon" fill="currentColor" />
-            Ultrazvuk Ordinacija
+          <Link href="/" className="navbar__logo" aria-label="Ultrazvučna ordinacija Polina, početna">
+            <Image
+              src="/logo.png"
+              alt="Ultrazvučna ordinacija Polina"
+              width={151}
+              height={99}
+              priority
+              className="navbar__logo-img"
+            />
           </Link>
 
           <ul className="navbar__links">
-            <li>
-              <Link href="/o-nama" className="navbar__link">
-                O Nama
-              </Link>
-            </li>
-            <li>
-              <Link href="/usluge" className="navbar__link">
-                Usluge
-              </Link>
-            </li>
-            <li>
-              <Link href="/kontakt" className="navbar__link">
-                Kontakt
-              </Link>
-            </li>
+            {links.map((link) => (
+              <li key={link.href}>
+                <Link
+                  href={link.href}
+                  className={`navbar__link${pathname === link.href ? " navbar__link--active" : ""}`}
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
           </ul>
 
           <div className="navbar__right">
@@ -57,15 +68,16 @@ export default function Navbar() {
       </div>
 
       <div className={`navbar__mobile-menu${menuOpen ? " open" : ""}`}>
-        <Link href="/o-nama" className="navbar__mobile-link" onClick={() => setMenuOpen(false)}>
-          O Nama
-        </Link>
-        <Link href="/usluge" className="navbar__mobile-link" onClick={() => setMenuOpen(false)}>
-          Usluge
-        </Link>
-        <Link href="/kontakt" className="navbar__mobile-link" onClick={() => setMenuOpen(false)}>
-          Kontakt
-        </Link>
+        {links.map((link) => (
+          <Link
+            key={link.href}
+            href={link.href}
+            className="navbar__mobile-link"
+            onClick={() => setMenuOpen(false)}
+          >
+            {link.label}
+          </Link>
+        ))}
         <Link
           href="/kontakt"
           className="btn btn--primary btn--md navbar__mobile-cta"

@@ -73,15 +73,6 @@ export default function KontaktPage() {
                   </tbody>
                 </table>
               </div>
-
-              <div className="contact-info__block">
-                <p className="contact-info__label">Instagram</p>
-                <p className="contact-info__value">
-                  <a href={practice.instagramHref} target="_blank" rel="noopener noreferrer">
-                    {practice.instagram} {/* [PLACEHOLDER] */}
-                  </a>
-                </p>
-              </div>
             </div>
 
             {/* RIGHT — Contact form */}
@@ -134,7 +125,6 @@ export default function KontaktPage() {
                 <button type="submit" className="btn btn--primary btn--lg" style={{ width: "100%" }}>
                   Pošaljite poruku
                 </button>
-                <p className="contact-form__note">Odgovaramo u roku od 24 sata.</p>
               </form>
             </div>
           </div>

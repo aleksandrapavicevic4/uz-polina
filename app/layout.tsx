@@ -1,30 +1,30 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Inter } from "next/font/google";
+import { Jost, Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import MobileStickyBar from "@/components/layout/MobileStickyBar";
 import FadeInProvider from "@/components/FadeInProvider";
 
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-playfair",
+const jost = Jost({
+  subsets: ["latin", "latin-ext"],
+  variable: "--font-jost",
   display: "swap",
 });
 
 const inter = Inter({
-  subsets: ["latin"],
+  subsets: ["latin", "latin-ext"],
   variable: "--font-inter",
   display: "swap",
 });
 
 export const metadata: Metadata = {
   title: {
-    default: "Ultrazvuk Ordinacija — Pedijatrska dijagnostika",
-    template: "%s | Ultrazvuk Ordinacija",
+    default: "Ultrazvučna ordinacija Polina — Beograd",
+    template: "%s | Ultrazvučna ordinacija Polina",
   },
   description:
-    "Specijalizovana privatna ordinacija za pedijatrsku ultrazvučnu dijagnostiku. Prof. dr sc. med. sa 30+ godina iskustva. Nalaz istog dana.",
+    "Ultrazvučna dijagnostika za decu od rođenja do adolescencije i ultrazvuk dojke. Specijalisti radiologije sa više od 30 godina iskustva. Smiljanićeva 7, Beograd.",
 };
 
 export default function RootLayout({
@@ -33,7 +33,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="sr" className={`${playfair.variable} ${inter.variable}`}>
+    <html lang="sr" className={`${jost.variable} ${inter.variable}`}>
       <body>
         <FadeInProvider>
           <Navbar />

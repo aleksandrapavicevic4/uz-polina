@@ -2,10 +2,10 @@ import Link from "next/link";
 import {
   Stethoscope,
   Baby,
-  Activity,
   Heart,
-  ScanLine,
-  Layers,
+  Droplets,
+  HeartPulse,
+  Brain,
 } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading";
 import Card from "@/components/ui/Card";
@@ -14,14 +14,14 @@ import { services } from "@/data/services";
 const iconMap: Record<string, React.ReactNode> = {
   Stethoscope: <Stethoscope size={24} />,
   Baby: <Baby size={24} />,
-  Activity: <Activity size={24} />,
   Heart: <Heart size={24} />,
-  ScanLine: <ScanLine size={24} />,
-  Layers: <Layers size={24} />,
+  Droplets: <Droplets size={24} />,
+  HeartPulse: <HeartPulse size={24} />,
+  Brain: <Brain size={24} />,
 };
 
 export default function FeaturedServices() {
-  const featured = services.slice(0, 6);
+  const featured = services.filter((s) => s.featured);
 
   return (
     <section className="section featured-services">
@@ -29,7 +29,7 @@ export default function FeaturedServices() {
         <SectionHeading
           label="Usluge"
           title="Šta nudimo"
-          subtitle="Specijalizovani ultrazvučni pregledi za decu svih uzrasta."
+          subtitle="Ultrazvučni pregledi za decu, od novorođenčadi do rane adolescencije, i ultrazvuk dojke."
           align="center"
         />
         <div className="featured-services__grid">
@@ -38,7 +38,7 @@ export default function FeaturedServices() {
               <Card
                 icon={iconMap[service.icon] ?? <Stethoscope size={24} />}
                 title={service.name}
-                price={service.price}
+                price={`${service.price} RSD`}
               />
             </div>
           ))}
