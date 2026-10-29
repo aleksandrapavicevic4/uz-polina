@@ -1,3 +1,5 @@
+import { practice } from "@/data/practice";
+
 interface ContactCTABannerProps {
   headline?: string;
   phone?: string;
@@ -7,9 +9,9 @@ interface ContactCTABannerProps {
 
 export default function ContactCTABanner({
   headline = "Zakažite pregled danas",
-  phone = "060 123 45 67", // [PLACEHOLDER]
-  phoneHref = "tel:+38160123456", // [PLACEHOLDER]
-  hours = "Pon–Pet: 08–18h | Sub: 08–13h", // [PLACEHOLDER]
+  phone = practice.phone,
+  phoneHref = practice.phoneHref,
+  hours = `Pon–Pet: ${practice.hours.weekdays} | Sub–Ned: zatvoreno`,
 }: ContactCTABannerProps) {
   return (
     <section className="cta-banner">

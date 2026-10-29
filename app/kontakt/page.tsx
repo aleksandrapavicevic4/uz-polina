@@ -26,13 +26,27 @@ export default function KontaktPage() {
             {/* LEFT — Contact info */}
             <div className="fade-in">
               <a href={practice.phoneHref} className="contact-info__phone">
-                {practice.phone} {/* [PLACEHOLDER] */}
+                {practice.phone}
               </a>
+
+              <div className="contact-info__block">
+                <p className="contact-info__label">Fiksni telefon</p>
+                <p className="contact-info__value">
+                  <a href={practice.landlineHref}>{practice.landline}</a>
+                </p>
+              </div>
+
+              <div className="contact-info__block">
+                <p className="contact-info__label">Email</p>
+                <p className="contact-info__value">
+                  <a href={practice.emailHref}>{practice.email}</a>
+                </p>
+              </div>
 
               <div className="contact-info__block">
                 <p className="contact-info__label">Adresa</p>
                 <p className="contact-info__value">
-                  {practice.address}{" "} {/* [PLACEHOLDER] */}
+                  {practice.address}{" "}
                   <br />
                   <a href={practice.mapLink} target="_blank" rel="noopener noreferrer">
                     Otvori u Google Maps →
@@ -46,11 +60,11 @@ export default function KontaktPage() {
                   <tbody>
                     <tr>
                       <td>Ponedeljak – Petak</td>
-                      <td>{practice.hours.weekdays} {/* [PLACEHOLDER] */}</td>
+                      <td>{practice.hours.weekdays}</td>
                     </tr>
-                    <tr>
+                    <tr className="closed">
                       <td>Subota</td>
-                      <td>{practice.hours.saturday} {/* [PLACEHOLDER] */}</td>
+                      <td>{practice.hours.saturday}</td>
                     </tr>
                     <tr className="closed">
                       <td>Nedelja</td>
@@ -131,7 +145,6 @@ export default function KontaktPage() {
       <section className="section--sm map-section">
         <div className="container">
           <div className="map-section__embed">
-            {/* [PLACEHOLDER] — replace with actual Google Maps embed URL */}
             <iframe
               src={practice.mapEmbedUrl}
               width="100%"

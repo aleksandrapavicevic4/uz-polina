@@ -150,7 +150,7 @@ export default function AboutPage() {
             Zakažite pregled
           </Link>
           <a href={practice.phoneHref} className="about-cta__phone">
-            {practice.phone} {/* [PLACEHOLDER] */}
+            {practice.phone}
           </a>
         </div>
       </section>

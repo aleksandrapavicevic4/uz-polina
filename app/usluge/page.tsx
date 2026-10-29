@@ -43,7 +43,7 @@ export default function UsluGePage() {
             <span>
               Za svaki pregled proverite uputstvo za pripremu ili nas pozovite na{" "}
               <a href={practice.phoneHref} style={{ color: "var(--color-primary)", fontWeight: 600 }}>
-                {practice.phone} {/* [PLACEHOLDER] */}
+                {practice.phone}
               </a>
               .
             </span>
@@ -78,9 +78,6 @@ export default function UsluGePage() {
 
       <ContactCTABanner
         headline="Zakažite pregled danas"
-        phone={practice.phone}
-        phoneHref={practice.phoneHref}
-        hours={`Pon–Pet: ${practice.hours.weekdays} | Sub: ${practice.hours.saturday}`}
       />
     </>
   );

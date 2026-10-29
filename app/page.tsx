@@ -6,7 +6,6 @@ import HowItWorks from "@/components/sections/HowItWorks";
 import FeaturedServices from "@/components/sections/FeaturedServices";
 import FAQSection from "@/components/sections/FAQSection";
 import ContactCTABanner from "@/components/ui/ContactCTABanner";
-import { practice } from "@/data/practice";
 
 export const metadata: Metadata = {
   title: "Početna",
@@ -28,9 +27,6 @@ export default function HomePage() {
       <FAQSection />
       <ContactCTABanner
         headline="Zakažite pregled danas"
-        phone={practice.phone}
-        phoneHref={practice.phoneHref}
-        hours={`Pon–Pet: ${practice.hours.weekdays} | Sub: ${practice.hours.saturday}`}
       />
     </>
   );

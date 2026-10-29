@@ -29,12 +29,14 @@ export default function Footer() {
           <div>
             <p className="footer__col-title">Kontakt</p>
             <a href={practice.phoneHref} className="footer__link">{practice.phone}</a>
+            <a href={practice.landlineHref} className="footer__link">{practice.landline}</a>
+            <a href={practice.emailHref} className="footer__link">{practice.email}</a>
             <p className="footer__link" style={{ cursor: "default" }}>{practice.address}</p>
             <p className="footer__link" style={{ cursor: "default" }}>
               Pon–Pet: {practice.hours.weekdays}
             </p>
             <p className="footer__link" style={{ cursor: "default" }}>
-              Sub: {practice.hours.saturday}
+              Sub–Ned: zatvoreno
             </p>
           </div>
         </div>
